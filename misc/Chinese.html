@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.css" rel="stylesheet">
+	<style>	
+
+		#example {
+			float:none;
+			position:relative;
+			margin-left: auto;
+			margin-right:auto;
+		}
+
+		#example p {
+			margin: 0 0.25em;
+			padding: 0.25em 0;
+		}
+
+		#div-before, #div-after {
+			background-color: #88d;
+			color: #000;
+			width:400px;
+		}
+
+		#div-1 {
+			width: 400px;
+			background-color: #000;
+			color: #fff;
+		}
+
+		#div-1-padding {
+			padding: 10px;
+		}
+
+		#div-1a {
+			background-color: #d33;
+			color: #fff;
+		}
+
+		#div-1b {
+			background-color: #3d3;
+			color: #fff;
+		}
+
+		#div-1c {
+			background-color: #33d;
+			color: #fff;
+		}
+		#text4 {
+			background:#FFFFEA; 
+			height:20px; 
+			width:100px;
+			border-radius: 10px;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			text-shadow: none;
+			opacity: .7;
+			border-style: solid;
+		}
+		#button1 {
+			background:#FFFFEA;
+			border-color: #FFFFEA;
+			color: #1B9AF7;
+			border-radius: 30px;
+			height:25px;
+			text-transform: uppercase; 
+			-webkit-box-shadow:none ;
+			box-shadow: none ;
+			text-shadow: none; 
+			-webkit-transition-property:all ;
+			-webkit-transition-duration: .3s;
+			transition-duration: .3s;
+			line-height: 30px;
+			border: none;
+		}
+		#button2 {
+			-webkit-linear-gradient(left top, left bottom, from(#f6f6f6), to(#e1e1e1));
+		}
+		#button3 {
+			-webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 0px white;
+		}
+		#button4 {
+			position: relative;
+			top: 0;
+		    -webkit-box-shadow: 0 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2);
+		    box-shadow: 0 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2); 
+		}
+		#popup_window_img {
+			width:400px;
+			height:auto;
+			margin:20px 0 0 10px;
+			padding:3px;
+			border:2px solid grey;
+			border-radius:3px;
+			box-sizing: border-box;
+		}
+		#popup_window_img:hover {
+			box-shadow: 1px 1px 3px grey, 2px 3px 5px #bbbbbb;
+			transition: 0.3s;
+		}
+		#popup_window_container {
+			position:fixed;
+			top:0px;
+			left:0px;
+			z-index:1;
+			width: 100%;
+			height:100%;
+			background: rgba(0,0,0,0.5);
+			transition: 0.2s;
+			visibility:hidden;
+		}
+		.transition_btn {
+			transition:all 0.5s;
+			clear:both;
+		}
+
+		#testing {
+			margin-top: 20px;
+			border:2px dashed black;
+			border-radius: 10px;
+		}
+
+		#testing:hover {
+			box-sizing: padding-box;
+			box-shadow: 3px 2px 4px grey, -1px -1px 3px lightgrey;
+			transition:all 0.5s;
+		}
+		#testing:hover::after {
+			content:"";
+			margin-bottom:20px;
+			transition:all 0.5s;
+		}
+		.cs_img {
+			position:fixed;
+			bottom:5px;
+			right:5px;
+			width:60px;
+		}
+		.add_border {
+			width:200px;
+			background:lightblue;
+			list-style-type: disc black;
+		}
+		#animation_container {
+ 		   width: 400px;
+ 		   height: 400px;
+ 		   position: relative;
+ 		   background: yellow;
+		}
+		#animation {
+    		width: 50px;
+    		height: 50px;
+    		position: absolute;
+    		background: red;
+		}
+	</style>
+	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+</head>
+<body>
+<!--	<input onkeyup="value=value.replace(/[^/u4E00-/u9FA5]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^/u4E00-/u9FA5]/g,''))" ID="Text4" NAME="Text4"> -->
+
+<!--<img src='http://maucc.com.alpha.tmogroup.asia/img/header/MAUCC-homepage-header.jpg' width='100%'>-->
+
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div id="example">
+			<div id="div-before">
+				<p>id = div-before</p>
+			</div>
+			<div id="div-1">
+				<div id="div-1-padding">
+					<p>id = div-1</p>
+					<div id="div-1a">
+						<p>id = div-1a</p>
+						<p>这是个测试....</p>
+					</div>
+					<div id="div-1b">
+						<p>id = div-1b</p>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+					</div>
+					<div id="div-1c">
+						<p>id = div-1c</p>
+					</div>
+				</div>
+			</div>
+			<div id="div-after">
+				<p>id = div-after</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div style="margin-left:auto;margin-right:auto;">
+			<img id='popup_window_img' src='1.png' onclick='image_on_click()'>
+		</div>
+	</div>
+</div>
+
+<br/>
+<hr/>
+
+<div class="row">
+<div class="panel-group col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+	<div class="panel panel-default">
+		<a data-toggle="collapse" href="#collapse0">
+			<div class='panel-heading bg-primary'>
+				<h4 class="panel-title text-danger"> Collapsible panel <span class="pull-right caret"></span>
+				</h4>
+			</div>
+		</a>
+		<div id="collapse0" class="panel-collapse collapse">
+			<a data-toggle="collapse" href="#collapse1">
+				<div class="panel-body">Panel Body<span style="transform:all 1s" class="pull-right"><span class="glyphicon glyphicon-triangle-bottom"></span></span>
+				</div>
+			</a>
+			<div id="collapse1" class="panel-collapse collapse">
+				<div class="panel-body">Panel Body2</div>
+				<div class="panel-body">Panel Body2</div>
+				<div class="panel-body">Panel Body2</div>
+				<div class="panel-footer">Panel Footer2</div>		
+			</div>
+			<div class="panel-body">Panel Body</div>
+			<div class="panel-body">Panel Body</div>
+			<div class="panel-footer">Panel Footer</div>		
+		</div>
+	</div>
+</div>
+<div id='testing' class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2" style='padding:30px;font-size: 20px;font-weight: 500;'>
+		<!-- Javascript onclick in button action -->
+		<center>
+			<button onclick="console.log(5 + 6)">Try calculate it!</button>
+		</center>
+	<h1">Chrome DevTools 概览</h1>
+	<p>Chrome开发者工具（简称DevTools）是一组网页制作和调试的工具，内嵌于Google Chrome浏览器中。DevTools使开发者更加深入的了解浏览器内部以及他们编写的应用。通过使用DevTools，可以更加高效的定位页面布局问题，设置JavaScript断点并且更好的理解代码优化。</p>
+	<h2">访问 DevTools</h2>
+	<p>访问DevTools，首先用Chrome打开一个web页面或web 应用，也可以通过下面的方式：</p>
+	<ul>
+		<li>在浏览器窗口的右上方选择Chrome菜单, 然后选择工具 &gt; 开发者工具。</li>
+		<li>在页面上任意元素上右键，然后选择审查元素。</li>
+	</ul>
+	<p>DevTools窗口会在Chrome浏览器的底部打开。</p>
+	<p>下面是一些有用的快捷键来快速的打开DevTools:</p>
+	<ul>
+		<li>使用 <code>Ctrl</code> + <code>Shift</code> + <code>I</code> (Mac上为 <code>Cmd</code>+<code>Opt</code>+<code>I</code>)打开DevTools。</li>
+		<li>使用 <code>Ctrl</code> + <code>Shift</code> + <code>J</code> (Mac上为 <code>Cmd</code>+<code>Opt</code>+<code>J</code>)打开DevTools中的控制台</li>
+		<li>使用 <code>Ctrl</code> + <code>Shift</code> + <code>C</code> (Mac上为 <code>Cmd</code>+<code>Shift</code>+<code>C</code>)打开DevTools的审查元素模式。</li>
+	</ul>
+	<p class="bg-primary">为了日常工作，<a href="https://developer.chrome.com/devtools/docs/shortcuts" target="_blank">学习快捷键</a>将帮助你节省更多的时间。</p>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2">
+		<input id="Text4" name="Text4" style=""/>
+		<input id='button1' type='button' value='Submit' onclick="print()"/>
+		<input id='button2' type='button' value='Submit2'/>
+		<input id='button3' type='button' value='Submit3'/>
+		<input id='button4' type='button' value='Submit4'/>
+		<input id='button6' type='button' class='btn-default transition_btn' value='Submit5'/>
+
+	</div>
+</div>
+
+<br/>
+
+
+<!-- nicedit js -->
+<script type="text/javascript" src="nicEdit.js"></script>
+<script type="text/javascript">
+	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+</script>
+
+<div style="margin-left:20px">
+	<h4>Third Textarea</h4>
+	<textarea name="area3" style="width: 300px; height: 100px;">
+		HTML <b>content</b> <i>default</i> in textarea
+	</textarea>
+</div>
+
+
+<div id='demo'></div>
+<input type="button" name="Add" onclick="fruit_basket_add()" value="Add">
+<input type="button" name="Remove" onclick="fruit_basket_remove()" value="Remove">
+
+
+<br/>
+<hr/>
+
+<div id="animation_container" onclick="myMove()"><div id="animation" onclick="myMove()"></div></div>
+<div id="xxx"></div>
+<!--
+	<div id="sidebar"></div>
+-->
+<br/>
+<hr/>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.js"></script>
+
+
+<script type="text/javascript" src="/Users/tsuyuhsia/Desktop/Practice
+/Chinese.js"></script>
+<script type="text/javascript">
+	$youziku.load("#testing", "43dadff536474dbcab22feebc8d7d1fc", "jdzhonyuanjian");
+   /*$youziku.load("#id1,.class1,h1", "43dadff536474dbcab22feebc8d7d1fc", "jdzhonyuanjian");*/
+   /*．．．*/
+   $youziku.draw();
+</script>
+
+
+
+</body>
+
+</html>
