@@ -1,0 +1,13 @@
+{
+    "name": "GruntjsTest",
+    "version": "0.0.1",
+    "description": "GruntjsTest",
+    "dependencies": {
+        "grunt": "~0.4.5",
+        "grunt-contrib-uglify": "^4.0.0",
+        "grunt-contrib-watch": "^1.1.0"
+    },
+    "devDependencies": {
+        "grunt-contrib-concat": "0.3.0"
+    }
+}
