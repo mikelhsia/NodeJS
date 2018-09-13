@@ -14,6 +14,6 @@ Class.prototype.rate = function(points) {
 
 Class.prototype.getPoints = function () {
     return ratePoints;
-}
+};
 
 module.exports = Class;
