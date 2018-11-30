@@ -14,5 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "async": "^2.6.1"
   }
 }
