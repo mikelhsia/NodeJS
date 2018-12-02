@@ -1,9 +1,11 @@
 var fs = require('fs'),
     async = require('async'),
+    path = require('path'),
     _dir = './data/';
 
 // TODO: 1. You can't call callback in waterfall multiple times
 // TODO: 2. Somehow fs.stat(_dir+file ...) doesn't get triggered.
+//      That's because fs.stat is also an asynchronous function
 
 var writeStream = fs.createWriteStream('./log.txt', {
     'flags': 'a',
@@ -21,6 +23,7 @@ async.waterfall([
     },
     function loopFiles(files, callback) {
         console.log('looping Files');
+        console.log(files);
         files.forEach(function (name) {
             console.log('loop file');
             console.log(name);
@@ -30,10 +33,26 @@ async.waterfall([
     function checkFile(file, callback) {
         console.log('checkFile');
         console.log(_dir+file);
-        fs.stat(_dir + file, function(err, stats){
-            console.log(_dir+file + ' existed');
-            callback(err, stats, file);
-        });
+
+        // fs.stat(_dir+file, function(err, stats) {
+        //     console.log('In');
+        //     if (err) {
+        //         console.error(err);
+        //     } else {
+        //         console.log(_dir+file + ' existed');
+        //         callback(err, stats, file);
+        //     }
+        // });
+        var stats = null;
+
+        try {
+            stats = fs.statSync(_dir + file);
+        } catch (e) {
+            console.error(e);
+            return;
+        }
+
+        callback(null, stats, file);
     },
     function readData(stats, file, callback) {
         console.log('reading data');
