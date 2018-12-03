@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "async": "^2.6.1",
-    "commander": "^2.19.0"
+    "commander": "^2.19.0",
+    "underscore": "^1.9.1"
   }
 }
